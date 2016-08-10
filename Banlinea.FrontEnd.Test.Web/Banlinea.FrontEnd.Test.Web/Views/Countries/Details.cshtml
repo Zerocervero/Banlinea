@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Banlinea</title>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            margin: 0;
+            background: rgba(255,255,255,1);
+            background: linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(94,96,201,0.77) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(94,96,201,0.77)));
+            background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(94,96,201,0.77) 100%);
+            background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(94,96,201,0.77) 100%);
+            background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(94,96,201,0.77) 100%);
+            background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(94,96,201,0.77) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#5e60c9', GradientType=0 );
+            font-family: 'Century Gothic';
+            height: 55vw;
+        }
+
+        h2 {
+            font-weight: 100;
+        }
+
+        .ContainerIndex {
+            width: 100%;
+            float: left;
+        }
+
+        .IconosContainer {
+            max-width: 1500px;
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+
+        .IconoContainer {
+            width: 240px;
+            max-width: 240px;
+            float: left;
+            padding-left: 4%;
+            padding-right: 4%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            text-align: center;
+        }
+
+        .ImagenIcono img:hover {
+            -webkit-filter: drop-shadow(3px 3px 3px rgba(59,59,59,0.4));
+            filter: drop-shadow(3px 3px 3px rgba(59,59,59,0.4));
+        }
+
+        .IconoContainer a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        #TituloTable {
+            width: 100%;
+        }
+
+        .table-fill {
+            background: white;
+            border-radius: 3px;
+            border-collapse: collapse;
+            height: 320px;
+            margin: auto;
+            padding: 5px;
+            width: 85%;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            animation: float 5s infinite;
+            font-family: "Century Gothic", Arial;
+        }
+
+            .table-fill a {
+                text-decoration: none;
+            }
+
+            .table-fill th {
+                color: #8f2032;
+                background: #201e1e;
+                border-bottom: 4px solid #ffb258;
+                font-size: 23px;
+                font-weight: 100;
+                padding: 4.5%;
+                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                vertical-align: middle;
+            }
+
+                .table-fill th:first-child {
+                    border-top-left-radius: 3px;
+                }
+
+                .table-fill th:last-child {
+                    border-top-right-radius: 3px;
+                    border-right: none;
+                }
+
+            .table-fill tr {
+                border-top: 1px solid #C1C3D1;
+                border-bottom-: 1px solid #C1C3D1;
+                color: #666B85;
+                font-size: 16px;
+                font-weight: normal;
+                text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+            }
+
+                .table-fill tr:first-child {
+                    border-top: none;
+                }
+
+                .table-fill tr:last-child {
+                    border-bottom: none;
+                }
+
+                .table-fill tr:nth-child(odd) td {
+                    background: #EBEBEB;
+                }
+
+                .table-fill tr:last-child td:first-child {
+                    border-bottom-left-radius: 3px;
+                }
+
+                .table-fill tr:last-child td:last-child {
+                    border-bottom-right-radius: 3px;
+                }
+
+            .table-fill td {
+                background: #FFFFFF;
+                padding: 2.8%;
+                text-align: left;
+                vertical-align: middle;
+                font-weight: 300;
+                font-size: 15px;
+                text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+                border-right: 1px solid #C1C3D1;
+            }
+
+                .table-fill td:last-child {
+                    border-right: 0px;
+                }
+
+            .table-fill th.text-left {
+                text-align: left;
+            }
+
+            .table-fill th.text-center {
+                text-align: center;
+            }
+
+            .table-fill th.text-right {
+                text-align: right;
+            }
+
+            .table-fill td.text-left {
+                text-align: left;
+            }
+
+            .table-fill td.text-center {
+                text-align: center;
+            }
+
+            .table-fill td.text-right {
+                text-align: right;
+            }
+
+        .text-left h1 {
+            margin: 0;
+            color: #FFF;
+        }
+
+        .text-left h2 {
+            margin: 0;
+            color: #666B85;
+        }
+
+        .text-left h3 {
+            margin: 0;
+        }
+
+        #Titulo {
+            padding: 2%;
+        }
+
+            #Titulo h1 {
+                padding: 2%;
+                font-size: 9px;
+                font-size: 1.5vw;
+            }
+
+        .Tab {
+            width: 10%;
+            float: left;
+        }
+
+        .text-left a {
+            color: #4dad33;
+        }
+
+        .text-left input[type="date"], [type="text"], [type="submit"], [type="password"] {
+            border: 1px solid #DBE1EB;
+            font-size: 18px;
+            font-family: Arial, Verdana;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -o-border-radius: 4px;
+            background: #FFFFFF;
+            background: linear-gradient(left, #FFFFFF, #F7F9FA);
+            background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+            background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+            background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+            color: #2E3133;
+            font-weight: 300;
+            font-size: 15px;
+            text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+            font-family: "Century Gothic", Arial;
+            width: 95%;
+        }
+
+        .text-left textarea {
+            border: 1px solid #DBE1EB;
+            font-size: 18px;
+            font-family: Arial, Verdana;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -o-border-radius: 4px;
+            background: #FFFFFF;
+            background: linear-gradient(left, #FFFFFF, #F7F9FA);
+            background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+            background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+            background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+            color: #2E3133;
+            font-weight: 300;
+            font-size: 15px;
+            text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+            font-family: "Century Gothic", Arial;
+            width: 95%;
+        }
+
+        .text-left select {
+            border: 1px solid #DBE1EB;
+            font-size: 18px;
+            font-family: Arial, Verdana;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -o-border-radius: 4px;
+            background: #FFFFFF;
+            background: linear-gradient(left, #FFFFFF, #F7F9FA);
+            background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+            background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+            background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+            color: #2E3133;
+            font-weight: 300;
+            font-size: 15px;
+            text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+            font-family: "Century Gothic", Arial;
+            width: 99.5%;
+        }
+
+        #MensajeFormulario {
+            height: 3vw;
+        }
+
+        .ContainerHojas {
+            width: 70% !important;
+            padding-left: 15% !important;
+            padding-right: 15% !important;
+        }
+
+        .Header {
+            width: 100%;
+            position: fixed;
+            background-color: #ffb258;
+            height: 7vw;
+        }
+
+        .Menu {
+            padding: 0;
+            list-style: none;
+            max-width: 1400px;
+            padding-top: 1%;
+            margin: 0 auto;
+        }
+
+        .ItemMemu {
+            float: left;
+            width: 200px;
+            text-align: center;
+        }
+
+            .ItemMemu a {
+                text-decoration: none;
+                color: #FFF;
+            }
+
+        .Sombra {
+            width: 100%;
+            height: 9vw;
+        }
+    </style>
+</head>
+<body>
+    @model Banlinea.FrontEnd.Test.Web.Models.Country
+
+    <header>
+        <div class="Header">
+            <ul class="Menu">
+                <li class="ItemMemu">
+                    <a href="~/Cities/"><h2>Ciudades</h2></a>
+                </li>
+                <li class="ItemMemu">
+                    <a href="~/Countries/"><h2>Países</h2></a>
+                </li>
+                <li class="ItemMemu">
+                    <a href="~/Enterprises/"><h2>Empresas</h2></a>
+                </li>
+                <li class="ItemMemu">
+                    <a href="~/ProductCategories/"><h2>Categorías deproducto</h2></a>
+                </li>
+                <li class="ItemMemu">
+                    <a href="~/ProductTypes/"><h2>Tipos de producto</h2></a>
+                </li>
+                <li class="ItemMemu">
+                    <a href="~/Products/"><h2>Productos</h2></a>
+                </li>
+                <li class="ItemMemu">
+                    <a href="~/Users/"><h2>Usuarios</h2></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="Sombra"></div>
+   
+        <table class="table-fill">
+            <thead>
+                <tr>
+                    <th class="text-left" colspan="2"><h1>País</h1></th>
+                </tr>
+            </thead>
+            <tbody class="table-hover">
+                <tr>
+                    <td class="text-left">
+                        <h2>
+
+                            @Html.LabelFor(model => model.Name)
+
+                        </h2>
+                    </td>
+                    <td class="text-left">
+                        <h2>
+                            @Html.DisplayFor(model => model.Name)
+                        </h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left"><h2>@Html.LabelFor(model => model.Code)</h2></td>
+                    <td class="text-left">
+                        <h2>
+                            @Html.DisplayFor(model => model.Code)
+                        </h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left"><h2>@Html.ActionLink("Volver", "Index")</h2></td>
+                    <td class="text-left"><h2>@Html.ActionLink("Editar", "Edit", new { id = Model.Id })</h2></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+</body>
+</html>
